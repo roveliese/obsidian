@@ -43,6 +43,13 @@ Quiet rose atmosphere, low-glare surfaces, readable Markdown.
   --rv-yellow: #f8c762;
   --rv-sapphire: #87c3ff;
   --rv-white: #ffffff;
+
+  --accent-h: 348;
+  --accent-s: 18%;
+  --accent-l: 59%;
+  --accent-hsl: 348, 18%, 59%;
+  --color-accent-hsl: 348, 18%, 59%;
+  --color-accent-rgb: 169, 130, 138;
 }
 
 .theme-light {
@@ -85,6 +92,13 @@ Quiet rose atmosphere, low-glare surfaces, readable Markdown.
   --rv-yellow: #a87326;
   --rv-sapphire: #206595;
   --rv-white: #ffffff;
+
+  --accent-h: 348;
+  --accent-s: 31%;
+  --accent-l: 55%;
+  --accent-hsl: 348, 31%, 55%;
+  --color-accent-hsl: 348, 31%, 55%;
+  --color-accent-rgb: 176, 106, 120;
 }
 
 body {
@@ -216,6 +230,11 @@ body {
   --checkbox-marker-color: var(--rv-darkest);
   --checkbox-border-color: var(--rv-overlay-2);
   --checkbox-border-color-hover: var(--rv-rose-light);
+
+  --dropdown-background: var(--rv-crust);
+  --dropdown-background-hover: var(--rv-surface-1);
+  --dropdown-border-color: color-mix(in srgb, var(--rv-rose-light) 40%, var(--divider-color));
+  --dropdown-color: var(--text-normal);
 
   --callout-title-color: var(--rv-text);
   --callout-border-width: 1px;
@@ -530,8 +549,19 @@ textarea,
 select,
 .dropdown {
   color: var(--text-normal);
-  background: var(--rv-crust);
+  background-color: var(--rv-crust);
   border-color: color-mix(in srgb, var(--rv-rose-light) 40%, var(--divider-color));
+}
+
+.dropdown {
+  color: var(--dropdown-color);
+  background-color: var(--dropdown-background);
+  border-color: var(--dropdown-border-color);
+  background-repeat: no-repeat;
+}
+
+.dropdown:hover {
+  background-color: var(--dropdown-background-hover);
 }
 
 input:focus,
