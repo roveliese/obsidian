@@ -1,0 +1,684 @@
+/*
+Roveliese for Obsidian
+Quiet rose atmosphere, low-glare surfaces, readable Markdown.
+*/
+
+.theme-dark {
+  color-scheme: dark;
+
+  --rv-crust: #0d0d11;
+  --rv-darker: #0e0e16;
+  --rv-mantle: #0f0f14;
+  --rv-darkest: #11111b;
+  --rv-base: #13131a;
+  --rv-list-hover: #1a1a23;
+  --rv-surface-1: #181825;
+  --rv-line-highlight: #1d1d26;
+  --rv-term-black: #1e1e28;
+  --rv-surface-0: #1e1e2e;
+  --rv-list-active: #262633;
+  --rv-selection: #2b2b44;
+  --rv-overlay-0: #30304a;
+  --rv-surface-2: #313244;
+  --rv-overlay-1: #45475a;
+  --rv-overlay-2: #585b70;
+  --rv-mauve: #7c6a8a;
+  --rv-subtext-0: #7f849c;
+  --rv-teal: #82d2ce;
+  --rv-sky: #89dceb;
+  --rv-subtext-1: #a6adc8;
+  --rv-green: #a8cc7c;
+  --rv-rose: #a9828a;
+  --rv-lavender: #aaa0fa;
+  --rv-rose-hover: #b99098;
+  --rv-rose-mid: #cba7aa;
+  --rv-red: #cc7c8a;
+  --rv-text: #cdd6f4;
+  --rv-comment: #e4e4e45e;
+  --rv-pink: #e394dc;
+  --rv-peach-warm: #ebc88d;
+  --rv-peach: #efb080;
+  --rv-tab-active: #f4e9e8;
+  --rv-rose-light: #f5e0dc;
+  --rv-yellow: #f8c762;
+  --rv-sapphire: #87c3ff;
+  --rv-white: #ffffff;
+}
+
+.theme-light {
+  color-scheme: light;
+
+  --rv-crust: #fef9f9;
+  --rv-darker: #e8e1e1;
+  --rv-mantle: #eee8e8;
+  --rv-darkest: #2a2330;
+  --rv-base: #f8f3f3;
+  --rv-list-hover: #ede5e5;
+  --rv-surface-1: #f2ecec;
+  --rv-line-highlight: #eee8e8;
+  --rv-term-black: #141414eb;
+  --rv-surface-0: #ede7e7;
+  --rv-list-active: #d9cbd3;
+  --rv-selection: #e2d6e2;
+  --rv-overlay-0: #e2d9db;
+  --rv-surface-2: #e6dddd;
+  --rv-overlay-1: #ece4e4;
+  --rv-overlay-2: #cdc4c6;
+  --rv-mauve: #9d6d88;
+  --rv-subtext-0: #7c7479;
+  --rv-teal: #b3003f;
+  --rv-sky: #4c7f8c;
+  --rv-subtext-1: #6e656b;
+  --rv-green: #1f8a65;
+  --rv-rose: #b06a78;
+  --rv-lavender: #6049b3;
+  --rv-rose-hover: #9c5868;
+  --rv-rose-mid: #bd8793;
+  --rv-red: #cf2d56;
+  --rv-text: #141414eb;
+  --rv-comment: #14141480;
+  --rv-pink: #8077c0;
+  --rv-peach-warm: #b8448b;
+  --rv-peach: #c85d3a;
+  --rv-tab-active: #1f1a1c;
+  --rv-rose-light: #a05566;
+  --rv-yellow: #a87326;
+  --rv-sapphire: #206595;
+  --rv-white: #ffffff;
+}
+
+body {
+  --font-text-theme: var(--font-interface);
+  --font-monospace-theme: var(--font-monospace);
+
+  --background-primary: var(--rv-base);
+  --background-primary-alt: var(--rv-line-highlight);
+  --background-secondary: var(--rv-mantle);
+  --background-secondary-alt: var(--rv-crust);
+  --background-modifier-hover: var(--rv-list-hover);
+  --background-modifier-active-hover: var(--rv-list-active);
+  --background-modifier-border: var(--rv-overlay-0);
+  --background-modifier-border-hover: var(--rv-overlay-2);
+  --background-modifier-border-focus: var(--rv-rose-mid);
+  --background-modifier-form-field: var(--rv-crust);
+  --background-modifier-form-field-highlighted: var(--rv-surface-1);
+  --background-modifier-box-shadow: rgba(0, 0, 0, 0.22);
+  --background-modifier-success: var(--rv-green);
+  --background-modifier-error: var(--rv-red);
+  --background-modifier-error-hover: var(--rv-red);
+  --background-modifier-cover: rgba(0, 0, 0, 0.45);
+
+  --text-normal: var(--rv-text);
+  --text-muted: var(--rv-subtext-1);
+  --text-faint: var(--rv-subtext-0);
+  --text-on-accent: var(--rv-white);
+  --text-on-accent-inverted: var(--rv-darkest);
+  --text-error: var(--rv-red);
+  --text-warning: var(--rv-yellow);
+  --text-success: var(--rv-green);
+  --text-accent: var(--rv-rose-light);
+  --text-accent-hover: var(--rv-rose-hover);
+  --text-selection: var(--rv-text);
+  --text-highlight-bg: color-mix(in srgb, var(--rv-yellow) 24%, transparent);
+  --text-highlight-bg-active: color-mix(in srgb, var(--rv-yellow) 34%, transparent);
+
+  --interactive-normal: var(--rv-surface-1);
+  --interactive-hover: var(--rv-surface-2);
+  --interactive-accent: var(--rv-rose);
+  --interactive-accent-hover: var(--rv-rose-hover);
+  --interactive-success: var(--rv-green);
+
+  --color-red: var(--rv-red);
+  --color-orange: var(--rv-peach);
+  --color-yellow: var(--rv-yellow);
+  --color-green: var(--rv-green);
+  --color-cyan: var(--rv-sky);
+  --color-blue: var(--rv-sapphire);
+  --color-purple: var(--rv-lavender);
+  --color-pink: var(--rv-pink);
+  --color-base-00: var(--rv-crust);
+  --color-base-05: var(--rv-darker);
+  --color-base-10: var(--rv-mantle);
+  --color-base-20: var(--rv-base);
+  --color-base-25: var(--rv-line-highlight);
+  --color-base-30: var(--rv-surface-0);
+  --color-base-35: var(--rv-surface-1);
+  --color-base-40: var(--rv-surface-2);
+  --color-base-50: var(--rv-overlay-1);
+  --color-base-60: var(--rv-overlay-2);
+  --color-base-70: var(--rv-subtext-0);
+  --color-base-100: var(--rv-text);
+  --color-accent: var(--rv-rose);
+  --color-accent-1: var(--rv-rose-light);
+  --color-accent-2: var(--rv-rose-hover);
+
+  --divider-color: var(--rv-overlay-0);
+  --divider-color-hover: var(--rv-overlay-2);
+  --tab-outline-color: transparent;
+  --tab-text-color: var(--rv-subtext-1);
+  --tab-text-color-active: var(--rv-tab-active);
+  --tab-container-background: var(--rv-mantle);
+  --tab-divider-color: transparent;
+  --titlebar-background: var(--rv-mantle);
+  --titlebar-background-focused: var(--rv-mantle);
+  --ribbon-background: var(--rv-mantle);
+  --status-bar-background: var(--rv-mantle);
+  --status-bar-text-color: var(--rv-subtext-0);
+
+  --nav-item-color: var(--rv-subtext-1);
+  --nav-item-color-hover: var(--rv-text);
+  --nav-item-color-active: var(--rv-tab-active);
+  --nav-item-background-hover: var(--rv-list-hover);
+  --nav-item-background-active: var(--rv-list-active);
+  --nav-indentation-guide-color: var(--rv-overlay-1);
+  --nav-collapse-icon-color: var(--rv-sky);
+
+  --link-color: var(--rv-sapphire);
+  --link-color-hover: var(--rv-sky);
+  --link-external-color: var(--rv-sky);
+  --link-external-color-hover: var(--rv-rose-light);
+  --link-unresolved-color: var(--rv-subtext-0);
+  --tag-color: var(--rv-rose-light);
+  --tag-color-hover: var(--rv-tab-active);
+  --tag-background: color-mix(in srgb, var(--rv-mauve) 22%, transparent);
+  --tag-background-hover: color-mix(in srgb, var(--rv-rose-light) 20%, transparent);
+
+  --h1-color: var(--rv-rose-light);
+  --h2-color: var(--rv-sapphire);
+  --h3-color: var(--rv-lavender);
+  --h4-color: var(--rv-peach);
+  --h5-color: var(--rv-green);
+  --h6-color: var(--rv-subtext-1);
+  --heading-spacing: calc(var(--p-spacing) * 1.25);
+
+  --blockquote-border-color: var(--rv-rose-light);
+  --blockquote-background-color: color-mix(in srgb, var(--rv-surface-1) 82%, transparent);
+  --code-background: var(--rv-surface-1);
+  --code-normal: var(--rv-text);
+  --code-comment: var(--rv-comment);
+  --code-function: var(--rv-peach);
+  --code-important: var(--rv-red);
+  --code-keyword: var(--rv-teal);
+  --code-operator: var(--rv-teal);
+  --code-property: var(--rv-lavender);
+  --code-punctuation: var(--rv-subtext-1);
+  --code-string: var(--rv-pink);
+  --code-tag: var(--rv-sapphire);
+  --code-value: var(--rv-peach-warm);
+
+  --table-header-background: var(--rv-surface-2);
+  --table-header-background-hover: var(--rv-overlay-1);
+  --table-row-background-hover: var(--rv-list-hover);
+  --table-border-color: var(--rv-overlay-0);
+
+  --checkbox-color: var(--rv-rose);
+  --checkbox-color-hover: var(--rv-rose-hover);
+  --checkbox-marker-color: var(--rv-darkest);
+  --checkbox-border-color: var(--rv-overlay-2);
+  --checkbox-border-color-hover: var(--rv-rose-light);
+
+  --callout-title-color: var(--rv-text);
+  --callout-border-width: 1px;
+  --callout-border-opacity: 0.55;
+  --callout-title-padding: 0;
+  --callout-content-padding: 0;
+
+  --graph-line: var(--rv-overlay-1);
+  --graph-node: var(--rv-subtext-1);
+  --graph-node-focused: var(--rv-rose-light);
+  --graph-node-tag: var(--rv-lavender);
+  --graph-node-attachment: var(--rv-green);
+  --graph-node-unresolved: var(--rv-red);
+}
+
+body.theme-light {
+  --text-on-accent: var(--rv-white);
+  --checkbox-marker-color: var(--rv-white);
+  --background-modifier-cover: rgba(42, 35, 48, 0.18);
+}
+
+.workspace,
+.workspace-split.mod-root,
+.workspace-tabs,
+.workspace-tab-header-container,
+.mod-sidedock .workspace-tabs {
+  background: var(--background-secondary);
+}
+
+.workspace-leaf-content,
+.markdown-source-view,
+.markdown-reading-view,
+.canvas-wrapper,
+.mod-root .workspace-leaf {
+  background: var(--background-primary);
+}
+
+.workspace-tab-header.is-active {
+  background: var(--background-primary);
+  color: var(--tab-text-color-active);
+  box-shadow: inset 0 2px 0 var(--rv-rose-light);
+}
+
+.workspace-tab-header:not(.is-active):hover,
+.clickable-icon:hover,
+.nav-file-title:hover,
+.nav-folder-title:hover,
+.tree-item-self:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.workspace-ribbon.mod-left,
+.side-dock-ribbon,
+.mod-left-split,
+.mod-right-split,
+.status-bar {
+  border-color: var(--divider-color);
+}
+
+.view-header {
+  background: var(--background-secondary);
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.view-header-title,
+.view-header-breadcrumb,
+.view-action,
+.clickable-icon {
+  color: var(--text-muted);
+}
+
+.view-header-title:hover,
+.view-header-breadcrumb:hover,
+.view-action:hover,
+.clickable-icon.is-active,
+.clickable-icon:hover {
+  color: var(--rv-rose-light);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+  color: var(--nav-item-color-active);
+  background: var(--nav-item-background-active);
+}
+
+.nav-file-tag {
+  color: var(--rv-sky);
+  background: color-mix(in srgb, var(--rv-sky) 16%, transparent);
+}
+
+.markdown-source-view.mod-cm6 .cm-scroller,
+.markdown-reading-view {
+  color: var(--text-normal);
+}
+
+.markdown-source-view.mod-cm6 .cm-active.cm-line {
+  background: var(--rv-line-highlight);
+}
+
+.cm-selectionBackground,
+.markdown-source-view.mod-cm6 .cm-selectionBackground,
+::selection {
+  background: var(--rv-selection) !important;
+}
+
+.cm-cursor,
+.markdown-source-view.mod-cm6 .cm-cursor {
+  border-left-color: var(--rv-sky);
+}
+
+.cm-lineNumbers,
+.cm-gutters {
+  background: var(--background-primary);
+  color: var(--text-faint);
+  border-color: var(--divider-color);
+}
+
+.cm-active .cm-gutterElement,
+.cm-active.cm-line .cm-fold-indicator .collapse-indicator {
+  color: var(--rv-rose-light);
+}
+
+.markdown-preview-view mark,
+.cm-highlight,
+mark {
+  color: var(--text-normal);
+  background: var(--text-highlight-bg);
+}
+
+.markdown-rendered blockquote {
+  padding: 0.55rem 0.9rem;
+  border-inline-start: 3px solid var(--blockquote-border-color);
+  background: var(--blockquote-background-color);
+}
+
+.markdown-rendered code,
+.cm-inline-code {
+  color: var(--rv-pink);
+  background: var(--code-background);
+  border: 1px solid color-mix(in srgb, var(--rv-overlay-0) 70%, transparent);
+  border-radius: 5px;
+}
+
+.markdown-rendered pre,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  background: var(--code-background);
+}
+
+.markdown-rendered pre {
+  border: 1px solid var(--divider-color);
+  border-radius: 8px;
+}
+
+.markdown-rendered hr {
+  border-color: var(--divider-color);
+}
+
+.markdown-rendered table {
+  border-color: var(--table-border-color);
+}
+
+.markdown-rendered th {
+  color: var(--rv-tab-active);
+  background: var(--table-header-background);
+}
+
+.markdown-rendered td,
+.markdown-rendered th {
+  border-color: var(--table-border-color);
+}
+
+.markdown-rendered tr:hover {
+  background: var(--table-row-background-hover);
+}
+
+.task-list-item-checkbox {
+  border-color: var(--checkbox-border-color);
+}
+
+.task-list-item-checkbox:checked {
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
+}
+
+.tag,
+.cm-hashtag {
+  border: 1px solid color-mix(in srgb, var(--rv-rose-light) 36%, transparent);
+}
+
+.callout {
+  background: color-mix(in srgb, rgb(var(--callout-color)) 12%, var(--background-primary));
+  border-color: rgba(var(--callout-color), var(--callout-border-opacity));
+  border-radius: 8px;
+}
+
+.callout[data-callout="note"],
+.callout[data-callout="abstract"],
+.callout[data-callout="summary"],
+.callout[data-callout="tldr"] {
+  --callout-color: 135, 195, 255;
+}
+
+.callout[data-callout="info"],
+.callout[data-callout="todo"],
+.callout[data-callout="tip"],
+.callout[data-callout="hint"],
+.callout[data-callout="important"] {
+  --callout-color: 137, 220, 235;
+}
+
+.callout[data-callout="success"],
+.callout[data-callout="check"],
+.callout[data-callout="done"] {
+  --callout-color: 168, 204, 124;
+}
+
+.callout[data-callout="question"],
+.callout[data-callout="help"],
+.callout[data-callout="faq"],
+.callout[data-callout="warning"],
+.callout[data-callout="caution"],
+.callout[data-callout="attention"] {
+  --callout-color: 248, 199, 98;
+}
+
+.callout[data-callout="failure"],
+.callout[data-callout="fail"],
+.callout[data-callout="missing"],
+.callout[data-callout="danger"],
+.callout[data-callout="error"],
+.callout[data-callout="bug"] {
+  --callout-color: 204, 124, 138;
+}
+
+.callout[data-callout="example"],
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  --callout-color: 170, 160, 250;
+}
+
+body.theme-light .callout[data-callout="note"],
+body.theme-light .callout[data-callout="abstract"],
+body.theme-light .callout[data-callout="summary"],
+body.theme-light .callout[data-callout="tldr"] {
+  --callout-color: 32, 101, 149;
+}
+
+body.theme-light .callout[data-callout="info"],
+body.theme-light .callout[data-callout="todo"],
+body.theme-light .callout[data-callout="tip"],
+body.theme-light .callout[data-callout="hint"],
+body.theme-light .callout[data-callout="important"] {
+  --callout-color: 76, 127, 140;
+}
+
+body.theme-light .callout[data-callout="success"],
+body.theme-light .callout[data-callout="check"],
+body.theme-light .callout[data-callout="done"] {
+  --callout-color: 31, 138, 101;
+}
+
+body.theme-light .callout[data-callout="question"],
+body.theme-light .callout[data-callout="help"],
+body.theme-light .callout[data-callout="faq"],
+body.theme-light .callout[data-callout="warning"],
+body.theme-light .callout[data-callout="caution"],
+body.theme-light .callout[data-callout="attention"] {
+  --callout-color: 168, 115, 38;
+}
+
+body.theme-light .callout[data-callout="failure"],
+body.theme-light .callout[data-callout="fail"],
+body.theme-light .callout[data-callout="missing"],
+body.theme-light .callout[data-callout="danger"],
+body.theme-light .callout[data-callout="error"],
+body.theme-light .callout[data-callout="bug"] {
+  --callout-color: 207, 45, 86;
+}
+
+body.theme-light .callout[data-callout="example"],
+body.theme-light .callout[data-callout="quote"],
+body.theme-light .callout[data-callout="cite"] {
+  --callout-color: 96, 73, 179;
+}
+
+.modal,
+.prompt,
+.menu,
+.suggestion-container,
+.popover,
+.tooltip {
+  background: var(--rv-surface-1);
+  border-color: var(--divider-color);
+  color: var(--text-normal);
+}
+
+.suggestion-item.is-selected,
+.menu-item:hover,
+.vertical-tab-nav-item:hover,
+.vertical-tab-nav-item.is-active {
+  background: var(--rv-list-active);
+  color: var(--text-normal);
+}
+
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select,
+.dropdown {
+  color: var(--text-normal);
+  background: var(--rv-crust);
+  border-color: color-mix(in srgb, var(--rv-rose-light) 40%, var(--divider-color));
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+.dropdown:focus {
+  border-color: var(--rv-rose-mid);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--rv-rose-mid) 24%, transparent);
+}
+
+button,
+.mod-cta {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+  border-color: transparent;
+}
+
+button:hover,
+.mod-cta:hover {
+  background: var(--interactive-accent-hover);
+}
+
+.search-result-file-title,
+.tree-item-inner,
+.backlink-pane .tree-item-self {
+  color: var(--text-muted);
+}
+
+.search-result-file-title:hover,
+.search-result-file-matched-text,
+.tree-item-self.is-clickable:hover .tree-item-inner {
+  color: var(--rv-rose-light);
+}
+
+.search-result-file-matched-text {
+  background: color-mix(in srgb, var(--rv-yellow) 24%, transparent);
+}
+
+.graph-view.color-fill {
+  color: var(--graph-node);
+}
+
+.graph-view.color-fill-focused {
+  color: var(--graph-node-focused);
+}
+
+.graph-view.color-fill-tag {
+  color: var(--graph-node-tag);
+}
+
+.graph-view.color-fill-attachment {
+  color: var(--graph-node-attachment);
+}
+
+.graph-view.color-fill-unresolved {
+  color: var(--graph-node-unresolved);
+}
+
+.graph-view.color-line {
+  color: var(--graph-line);
+}
+
+.graph-view.color-arrow {
+  color: var(--rv-sky);
+}
+
+.metadata-container,
+.metadata-property,
+.metadata-property-key,
+.metadata-property-value {
+  border-color: var(--divider-color);
+}
+
+.metadata-property:hover {
+  background: var(--background-modifier-hover);
+}
+
+.metadata-property-key {
+  color: var(--rv-lavender);
+}
+
+.metadata-property-value {
+  color: var(--text-muted);
+}
+
+.cm-comment,
+.token.comment {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.cm-keyword,
+.token.keyword {
+  color: var(--code-keyword);
+}
+
+.cm-string,
+.token.string {
+  color: var(--code-string);
+}
+
+.cm-number,
+.token.number {
+  color: var(--code-value);
+}
+
+.cm-def,
+.cm-function,
+.token.function {
+  color: var(--code-function);
+}
+
+.cm-property,
+.token.property {
+  color: var(--code-property);
+}
+
+.cm-operator,
+.token.operator {
+  color: var(--code-operator);
+}
+
+.cm-tag,
+.token.tag {
+  color: var(--code-tag);
+}
+
+.cm-atom,
+.token.boolean,
+.token.constant {
+  color: var(--rv-yellow);
+}
+
+.cm-error,
+.token.deleted {
+  color: var(--rv-red);
+}
+
+.cm-formatting,
+.token.punctuation {
+  color: var(--code-punctuation);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--rv-overlay-1) 70%, transparent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--rv-overlay-2) 78%, transparent);
+}
