@@ -1,5 +1,5 @@
 <h3 align="center">
-    <img src="https://github.com/roveliese/obsidian/blob/main/images/icon.png?raw=1" width="100" alt="Logo"/><br/>
+    <img src="https://raw.githubusercontent.com/roveliese/.github/main/assets/icon.png" width="100" alt="Logo"/><br/>
     <br/>
     Roveliese for <a href="https://obsidian.md">Obsidian</a>
     <br/>
@@ -52,7 +52,7 @@ Markdown stays readable without carrying the brand color everywhere. Rose warmth
 Found an issue or have a suggestion? Open an issue on [GitHub](https://github.com/roveliese/obsidian/issues).
 
 <p align="center">
-  <img src="https://github.com/roveliese/obsidian/blob/main/images/footer.png?raw=1" width="600" alt=""/>
+  <img src="https://raw.githubusercontent.com/roveliese/.github/main/assets/footer.png" width="600" alt=""/>
 </p>
 
 <p align="center">
